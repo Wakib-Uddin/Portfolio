@@ -1,18 +1,6 @@
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", function() {
-    header.classList.toggle("sticky",this.window.scrollY > 120);
-})
-let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector('.navlist');
-
-menu.onclick = () =>{
-    menu.classList.toggle('bx-x');
-    navlist.classList.toggle('active');
-}
-
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navlist.classList.remove('active');
-}
-
+const menuButton=document.querySelector(".menu-toggle");const nav=document.querySelector(".nav");
+menuButton?.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Close navigation":"Open navigation");});
+nav?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuButton?.setAttribute("aria-expanded","false");menuButton?.setAttribute("aria-label","Open navigation");}));
+if("IntersectionObserver" in window){const observer=new IntersectionObserver((entries,obs)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");obs.unobserve(entry.target);}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));}else{document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));}
+const target=document.querySelector("#typed-role");const roles=["Python Backend Developer","FastAPI & REST API Builder","Data Analysis & ML Enthusiast"];let r=0,c=0,del=false;
+function type(){if(!target)return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){target.textContent=roles[0];return;}const s=roles[r];target.textContent=s.slice(0,c);if(!del&&c<s.length){c++;setTimeout(type,72);}else if(!del){del=true;setTimeout(type,1450);}else if(c>0){c--;setTimeout(type,32);}else{del=false;r=(r+1)%roles.length;setTimeout(type,350);}}type();
