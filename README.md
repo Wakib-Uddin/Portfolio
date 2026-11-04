@@ -5,7 +5,8 @@ A clean, responsive portfolio focused on my learning journey in data analysis, P
 ## Design
 - Editorial, data-focused visual style
 - Responsive layout for desktop and mobile
-- Lightweight chart illustration and rotating role text
+- Lightweight chart illustration and accessible typewriter role animation
+- Reduced-motion support
 - Reduced-motion support
 - Direct links to source repositories
 
@@ -28,6 +29,7 @@ In the repository, open **Settings → Pages**, select **Deploy from a branch**,
 - [Spam Email Classifier](https://github.com/Wakib-Uddin/Spam-Email-Classifier)
 - [Movie Recommendation API](https://github.com/Wakib-Uddin/Movie-Recommendation-API)
 - [E-Commerce REST API](https://github.com/Wakib-Uddin/E-Commerce-REST-API)
+- [Expense Tracker CLI](https://github.com/Wakib-Uddin/Expanse-Tracker)
 
 ## Contact
 - [GitHub](https://github.com/Wakib-Uddin)
