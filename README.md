@@ -1,49 +1,37 @@
-# A.M. Wakib Uddin — Personal Portfolio
+# Wakib Uddin — Personal Portfolio
 
-A responsive personal portfolio website showcasing my background, technical skills, projects, and professional profile as a Computer Science & Engineering graduate.
+A personal portfolio website for my work in Python backend development, data analysis and machine learning.
 
-## 🛠️ Built With
+## About
 
-- HTML5
-- CSS3
+Computer Science & Engineering graduate from Premier University, Chattogram, Bangladesh.
+
+## Featured work
+
+- [E-Commerce REST API](https://github.com/Wakib-Uddin/E-Commerce-REST-API) — FastAPI, SQLAlchemy, authentication and order workflows.
+- [Spam Email Classifier](https://github.com/Wakib-Uddin/Spam-Email-Classifier) — TF-IDF text features and classification models.
+- [Network Intrusion Detection](https://github.com/Wakib-Uddin/Network-Intrusion-Detection) — preprocessing pipeline and Random Forest classifier.
+- [Movie Recommendation API](https://github.com/Wakib-Uddin/Movie-Recommendation-API) — content-based recommendations with TF-IDF.
+- [Data Analysis Dashboard](https://github.com/Wakib-Uddin/Data-Analysis-Dashboard) — CSV analysis, quality checks, KPIs and plots.
+- [Expense Tracker CLI](https://github.com/Wakib-Uddin/Expanse-Tracker) — Python CLI, JSON persistence and unit tests.
+
+## Built with
+
+- HTML5 and CSS3
 - JavaScript
-- Responsive Web Design
+- Boxicons, Remix Icon and AOS animation library
 
-## ✨ Highlights
-
-- Personal introduction and professional profile
-- Skills and technology showcase
-- Project portfolio
-- Responsive layout
-- Contact/social links
-
-## 🚀 Run Locally
-
-Clone the repository and open `index.html` in a browser.
+## Run locally
 
 ```bash
 git clone https://github.com/Wakib-Uddin/Portfolio.git
 cd Portfolio
 ```
 
-Then open `index.html`.
+Open `index.html` in a browser. The icon and animation libraries are loaded from CDNs, so those features require an internet connection.
 
-## 📂 Project Structure
-
-```text
-Portfolio/
-├── index.html
-├── style.css
-├── script.js
-├── img/
-└── README.md
-```
-
-## 👨‍💻 About Me
-
-I am a Computer Science & Engineering graduate focused on Python backend development, REST APIs, data science, and machine learning.
-
-## 📫 Contact
+## Contact
 
 - GitHub: https://github.com/Wakib-Uddin
+- LinkedIn: https://www.linkedin.com/in/wakib-uddin-safi-1475902a0/
 - Email: wakib.cse.bd@gmail.com
