@@ -29,10 +29,19 @@ if(role){
   }
 }
 
-// Theme preference is remembered locally; system preference is respected initially.
+// Theme preference is remembered locally; storage failures must never disable the switch.
 const themeButton=document.querySelector(".theme-toggle");
-const savedTheme=localStorage.getItem("portfolio-theme");
-if(savedTheme==="dark"||(!savedTheme&&window.matchMedia("(prefers-color-scheme: dark)").matches)){
+const readSavedTheme=()=>{
+  try{return window.localStorage.getItem("portfolio-theme");}
+  catch(error){return null;}
+};
+const saveTheme=(value)=>{
+  try{window.localStorage.setItem("portfolio-theme",value);}
+  catch(error){/* Theme still works for this page when storage is unavailable. */}
+};
+const savedTheme=readSavedTheme();
+const systemPrefersDark=window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
+if(savedTheme==="dark"||(savedTheme!=="light"&&systemPrefersDark)){
   document.body.classList.add("dark");
 }
 const updateThemeButton=()=>{
@@ -41,15 +50,23 @@ const updateThemeButton=()=>{
   themeButton?.setAttribute("title",dark?"Switch to light theme":"Switch to dark theme");
   const icon=themeButton?.querySelector(".theme-icon");
   const label=themeButton?.querySelector(".theme-label");
-  if(icon) icon.textContent=dark?"☀":"☾";
-  if(label) label.textContent=dark?"Light mode":"Dark mode";
+  if(icon)icon.textContent=dark?"☀":"☾";
+  if(label)label.textContent=dark?"Light mode":"Dark mode";
   document.querySelector('meta[name="theme-color"]')?.setAttribute("content",dark?"#101b18":"#f6f8f7");
 };
-updateThemeButton();
-themeButton?.addEventListener("click",()=>{
-  document.body.classList.toggle("dark");
-  localStorage.setItem("portfolio-theme",document.body.classList.contains("dark")?"dark":"light");
+const toggleTheme=()=>{
+  const dark=document.body.classList.toggle("dark");
+  saveTheme(dark?"dark":"light");
   updateThemeButton();
+};
+updateThemeButton();
+themeButton?.addEventListener("click",toggleTheme);
+// Delegated fallback keeps the control responsive if another script replaces its markup.
+document.addEventListener("click",(event)=>{
+  if(event.target.closest?.(".theme-toggle")&&event.target!==themeButton){
+    // The direct listener handles clicks on the original button; this is only for replacement markup.
+    if(!themeButton?.isConnected)toggleTheme();
+  }
 });
 
 // Project category filters.
