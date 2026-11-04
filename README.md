@@ -1,12 +1,14 @@
 # Wakib Uddin — Data Analysis Portfolio
 
-A clean, responsive portfolio focused on my learning journey in data analysis, Python, SQL, Excel and machine learning.
+A responsive professional portfolio showcasing projects and learning across data analysis, Python, SQL, Excel, machine learning and backend development.
 
 ## Design
 - Editorial, data-focused visual style
 - Responsive layout for desktop and mobile
-- Lightweight chart illustration and accessible typewriter role animation
-- Reduced-motion support
+- Lightweight chart illustration and rotating role animation
+- Interactive project category filters
+- Light/dark theme toggle with saved preference
+- Scroll progress, active navigation and reveal-on-scroll effects
 - Reduced-motion support
 - Direct links to source repositories
 
