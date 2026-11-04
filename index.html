@@ -1,95 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wakib Uddin — Python backend development, data analysis and machine learning projects.">
-  <title>Wakib Uddin | Python Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#08111f">
+<meta name="description" content="Wakib Uddin — Python backend developer focused on FastAPI, SQL, data analysis and machine learning.">
+<meta property="og:title" content="Wakib Uddin | Python Backend & Data"><meta property="og:description" content="Explore Python backend, data analysis and machine-learning projects by Wakib Uddin."><meta property="og:type" content="website">
+<title>Wakib Uddin | Python Backend & Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <a href="#home" class="logo">Wakib <span>Uddin.</span></a>
-  <div class="bx bx-menu" id="menu-icon" aria-label="Toggle navigation"></div>
-  <ul class="navlist">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#portfolio">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="top-btnn"><a href="#contact" class="h-btn">Contact Me</a></div>
-</header>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="site-header"><a class="brand" href="#home">WU<span>.</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+<nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#stack">Stack</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav><a class="header-cta" href="https://github.com/Wakib-Uddin" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></header>
+<main id="home">
+<section class="hero section-wrap"><div class="hero-copy reveal"><div class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR LEARNING & COLLABORATION</div><p class="kicker">HELLO, I'M</p><h1>Wakib <span>Uddin</span><span class="cursor">_</span></h1><div class="role-line"><span id="typed-role">Python Backend Developer</span><span class="typing-caret"></span></div>
+<p class="hero-text">I build practical software with Python — from REST APIs and database-backed applications to data analysis and machine-learning experiments.</p><div class="hero-actions"><a class="button button-primary" href="#projects">Explore projects <span>↘</span></a><a class="button button-ghost" href="https://github.com/Wakib-Uddin" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a></div><div class="hero-meta"><span>📍 Chattogram, Bangladesh</span><span>🎓 BSc, Computer Science & Engineering</span></div></div>
+<div class="hero-visual" aria-label="Decorative Python and data illustration"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-node node-a"></div><div class="orbit-node node-b"></div><div class="orbit-node node-c"></div>
+<div class="code-card"><div class="code-top"><span></span><span></span><span></span><small>developer.py</small></div><pre><code><i>class</i> <b>Developer</b>:
+    focus = [
+      <em>"Python"</em>,
+      <em>"FastAPI"</em>,
+      <em>"Data Science"</em>
+    ]
 
-<section class="hero" id="home">
-  <div class="main-content" data-aos="fade-in">
-    <h4>Hello, I'm</h4>
-    <h1>Wakib <span>Uddin</span></h1>
-    <p>Computer Science and Engineering graduate focused on Python backend development, REST APIs, data analysis and machine learning. I enjoy building practical projects and improving them through testing and continuous learning.</p>
-    <div class="social">
-      <a href="https://github.com/Wakib-Uddin" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill"></i></a>
-      <a href="https://www.linkedin.com/in/wakib-uddin-safi-1475902a0/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
-    </div>
-    <div class="main-btn">
-      <a href="#portfolio" class="btn">View Projects</a>
-      <a href="https://github.com/Wakib-Uddin" class="btn btn2" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="about-img" data-aos="zoom-in-down"><img src="./img/about2.png" alt="Portrait"></div>
-  <div class="about-text" data-aos="zoom-in-up">
-    <h2>Python Backend & <span>Data</span> Projects</h2>
-    <div class="exp-area">
-      <p class="exp">Education: <span>BSc in Computer Science & Engineering</span></p>
-      <p class="exp">University: <span>Premier University, Chattogram</span></p>
-      <p class="exp">Location: <span>Chattogram, Bangladesh</span></p>
-      <p class="exp">Focus: <span>Python, REST APIs, SQL, data analysis and machine learning</span></p>
-    </div>
-    <a href="#portfolio" class="btn">Explore Projects</a>
-  </div>
-</section>
-
-<section class="services" id="skills">
-  <div class="center-text"><h2>Technical <span>Skills</span></h2></div>
-  <div class="services-content">
-    <div class="box"><h3>Python Backend</h3><p>Python, FastAPI, REST API design, authentication, SQL and PostgreSQL fundamentals.</p></div>
-    <div class="box"><h3>Data & Machine Learning</h3><p>Pandas, NumPy, scikit-learn, text classification, data preprocessing and model evaluation.</p></div>
-    <div class="box"><h3>Development Tools</h3><p>Git, GitHub, HTML, CSS, JavaScript, testing fundamentals and Docker basics.</p></div>
-  </div>
-</section>
-
-<section class="portfolio" id="portfolio">
-  <div class="center-text"><h2>Featured <span>Projects</span></h2></div>
-  <div class="Portfolio-content">
-    <div class="row"><div class="main-row"><div class="row-text"><h5>Python · FastAPI</h5></div></div><h4>E-Commerce REST API</h4><p>REST API with authentication, products, orders and database integration.</p><a href="https://github.com/Wakib-Uddin/E-Commerce-REST-API" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-    <div class="row"><div class="main-row"><div class="row-text"><h5>NLP · Scikit-learn</h5></div></div><h4>Spam Email Classifier</h4><p>Text classification pipeline using TF-IDF and machine-learning models.</p><a href="https://github.com/Wakib-Uddin/Spam-Email-Classifier" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-    <div class="row"><div class="main-row"><div class="row-text"><h5>Machine Learning</h5></div></div><h4>Network Intrusion Detection</h4><p>Data preprocessing and Random Forest classification for network traffic data.</p><a href="https://github.com/Wakib-Uddin/Network-Intrusion-Detection" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-    <div class="row"><div class="main-row"><div class="row-text"><h5>Python · FastAPI</h5></div></div><h4>Movie Recommendation API</h4><p>Content-based recommendations using TF-IDF and cosine similarity.</p><a href="https://github.com/Wakib-Uddin/Movie-Recommendation-API" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-    <div class="row"><div class="main-row"><div class="row-text"><h5>Data Analysis</h5></div></div><h4>Data Analysis Dashboard</h4><p>CSV data checks, summary statistics, KPI exports and visualizations.</p><a href="https://github.com/Wakib-Uddin/Data-Analysis-Dashboard" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-    <div class="row"><div class="main-row"><div class="row-text"><h5>Python · CLI</h5></div></div><h4>Expense Tracker</h4><p>Command-line expense tracking with JSON storage and unit tests.</p><a href="https://github.com/Wakib-Uddin/Expanse-Tracker" target="_blank" rel="noopener noreferrer">View source code ↗</a></div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="center-text"><h2>Get in <span>Touch</span></h2></div>
-  <div class="contact-form">
-    <p>For collaboration, internships or junior developer opportunities, contact me by email or connect on LinkedIn.</p>
-    <p><a class="btn" href="mailto:wakib.cse.bd@gmail.com">Email Me</a></p>
-    <p><a href="https://www.linkedin.com/in/wakib-uddin-safi-1475902a0/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></p>
-  </div>
-</section>
-
-<div class="footer">
-  <div class="copyright"><p>© 2026 Wakib Uddin. All rights reserved.</p></div>
-  <a href="#home" class="scroll-top" aria-label="Back to top"><i class="ri-arrow-up-s-fill"></i></a>
-</div>
-<script src="./script.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({ offset: 100, duration: 800 });</script>
-</body>
-</html>
+    <i>def</i> <b>build</b>(self):
+        <strong>return</strong> <em>"Useful software"</em></code></pre></div><div class="floating-chip chip-python">🐍 Python</div><div class="floating-chip chip-api">⚡ FastAPI</div><div class="floating-chip chip-data">▥ Data & ML</div></div>
+<a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a></section>
+<section class="section-wrap about-section" id="about"><div class="section-heading reveal"><p class="eyebrow">01 / ABOUT</p><h2>Curious mind.<br><span>Practical builder.</span></h2></div><div class="about-content reveal"><p class="large-copy">I'm a Computer Science & Engineering graduate from <strong>Premier University, Chattogram</strong>. My interests sit at the intersection of backend engineering, data analysis and machine learning.</p><p class="muted-copy">I enjoy taking an idea from a small Python script to a documented project with clear setup steps. I'm currently strengthening my API design, database, testing and model-evaluation skills through hands-on work.</p><div class="quick-facts"><div><b>01</b><span>Python-first</span></div><div><b>02</b><span>Project-driven</span></div><div><b>03</b><span>Always learning</span></div></div></div></section>
+<section class="section-wrap stack-section" id="stack"><div class="section-heading reveal"><p class="eyebrow">02 / TOOLKIT</p><h2>Technologies I <span>work with.</span></h2></div><div class="stack-grid reveal">
+<article class="stack-card"><div class="stack-icon">🐍</div><h3>Python Development</h3><p>Python, FastAPI, REST APIs, argparse and application structure.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>REST</span></div></article>
+<article class="stack-card"><div class="stack-icon">▤</div><h3>Data & Machine Learning</h3><p>Data cleaning, feature preparation, model training and evaluation.</p><div class="tags"><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span></div></article>
+<article class="stack-card"><div class="stack-icon">◫</div><h3>Databases & Tools</h3><p>Relational data, version control and practical development workflows.</p><div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Git</span></div></article></div></section>
+<section class="section-wrap projects-section" id="projects"><div class="section-heading reveal"><p class="eyebrow">03 / SELECTED WORK</p><h2>Projects with a <span>purpose.</span></h2><p class="section-subtitle">A selection of backend, data and machine-learning projects. Each card links to its source repository.</p></div><div class="project-grid">
+<article class="project-card project-featured reveal"><div class="project-top"><span class="project-number">01</span><span class="project-type">BACKEND / API</span><span class="project-symbol">↗</span></div><div class="project-art art-api"><span class="art-bracket">{ }</span><span class="art-line"></span><span class="art-node"></span></div><h3>E-Commerce REST API</h3><p>Backend API with JWT authentication, product and category management, cart and order workflows.</p><div class="tags"><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>JWT</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/E-Commerce-REST-API" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+<article class="project-card reveal"><div class="project-top"><span class="project-number">02</span><span class="project-type">MACHINE LEARNING</span><span class="project-symbol">↗</span></div><div class="project-art art-security"><span>◈</span><span class="pulse-ring"></span></div><h3>Network Intrusion Detection</h3><p>Structured traffic classification with preprocessing, Random Forest and evaluation metrics.</p><div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/Network-Intrusion-Detection" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+<article class="project-card reveal"><div class="project-top"><span class="project-number">03</span><span class="project-type">NLP</span><span class="project-symbol">↗</span></div><div class="project-art art-nlp"><span>01</span><span>0.82</span><span>spam?</span></div><h3>Spam Email Classifier</h3><p>Text-classification workflow using TF-IDF, Logistic Regression and Multinomial Naive Bayes.</p><div class="tags"><span>NLP</span><span>TF-IDF</span><span>Scikit-learn</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/Spam-Email-Classifier" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+<article class="project-card reveal"><div class="project-top"><span class="project-number">04</span><span class="project-type">RECOMMENDER SYSTEM</span><span class="project-symbol">↗</span></div><div class="project-art art-movie"><span>✦</span><span>◌</span><span>✧</span></div><h3>Movie Recommendation API</h3><p>Content-based movie recommendations using TF-IDF and cosine similarity through FastAPI.</p><div class="tags"><span>FastAPI</span><span>TF-IDF</span><span>Cosine Similarity</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/Movie-Recommendation-API" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+<article class="project-card reveal"><div class="project-top"><span class="project-number">05</span><span class="project-type">DATA ANALYSIS</span><span class="project-symbol">↗</span></div><div class="project-art art-chart"><span class="bar bar-one"></span><span class="bar bar-two"></span><span class="bar bar-three"></span><span class="bar bar-four"></span></div><h3>Data Analysis Pipeline</h3><p>CSV cleaning, missing-value checks, KPIs, descriptive statistics and plots.</p><div class="tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/Data-Analysis-Dashboard" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+<article class="project-card reveal"><div class="project-top"><span class="project-number">06</span><span class="project-type">PYTHON / CLI</span><span class="project-symbol">↗</span></div><div class="project-art art-terminal"><span>$ expense add 250 food</span><span>✓ saved successfully</span></div><h3>Expense Tracker CLI</h3><p>Command-line spending tracker with JSON storage, validation and unit tests.</p><div class="tags"><span>Python</span><span>argparse</span><span>unittest</span></div><a class="project-link" href="https://github.com/Wakib-Uddin/Expanse-Tracker" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></article>
+</div></section>
+<section class="section-wrap journey-section"><div class="journey-panel reveal"><div><p class="eyebrow">04 / WHAT'S NEXT</p><h2>Learning by <span>building.</span></h2><p class="muted-copy">My current focus is improving backend reliability, database design, automated testing, deployment and reproducible machine-learning workflows.</p></div><div class="journey-list"><div><span>01</span> API testing & documentation</div><div><span>02</span> SQL and database design</div><div><span>03</span> Model evaluation & persistence</div><div><span>04</span> CI/CD and deployment</div></div></div></section>
+<section class="section-wrap contact-section" id="contact"><div class="contact-card reveal"><p class="eyebrow">05 / CONTACT</p><h2>Let's build something <span>useful.</span></h2><p>Open to connecting with developers, learning communities and people working on interesting software projects.</p><div class="hero-actions"><a class="button button-primary" href="https://www.linkedin.com/in/wakib-uddin-safi-1475902a0/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><a class="button button-ghost" href="https://github.com/Wakib-Uddin" target="_blank" rel="noreferrer">Follow on GitHub ↗</a></div></div></section>
+</main>
+<footer class="footer"><a class="brand" href="#home">WU<span>.</span></a><p>Designed & built by Wakib Uddin · Chattogram, Bangladesh</p><a href="#home">Back to top ↑</a></footer><script src="script.js"></script></body></html>
