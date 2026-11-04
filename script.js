@@ -38,7 +38,12 @@ if(savedTheme==="dark"||(!savedTheme&&window.matchMedia("(prefers-color-scheme: 
 const updateThemeButton=()=>{
   const dark=document.body.classList.contains("dark");
   themeButton?.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme");
-  if(themeButton) themeButton.textContent=dark?"☀":"◐";
+  themeButton?.setAttribute("title",dark?"Switch to light theme":"Switch to dark theme");
+  const icon=themeButton?.querySelector(".theme-icon");
+  const label=themeButton?.querySelector(".theme-label");
+  if(icon) icon.textContent=dark?"☀":"☾";
+  if(label) label.textContent=dark?"Light mode":"Dark mode";
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content",dark?"#101b18":"#f6f8f7");
 };
 updateThemeButton();
 themeButton?.addEventListener("click",()=>{
