@@ -134,3 +134,83 @@ body.dark .float-note{box-shadow:0 8px 25px #0005}
   .learning-inner h2{font-size:clamp(2.4rem,11vw,3rem)}
   .learning-inner li{grid-template-columns:30px minmax(0,1fr);font-size:.82rem}
 }
+
+
+/* ===== Desktop layout refinement (wide screens) ===== */
+@media (min-width: 901px) {
+  html { scroll-padding-top: 88px; }
+  body { min-width: 320px; }
+  .header {
+    position: sticky;
+    top: 0;
+    min-height: 78px;
+    padding-inline: max(5%, calc((100vw - 1320px)/2));
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    z-index: 100;
+  }
+  .header nav { margin-inline: auto; }
+  .header-actions { flex: 0 0 auto; }
+  .wrap { width: min(1180px, 88%); }
+  .hero {
+    min-height: min(760px, calc(100vh - 78px));
+    grid-template-columns: minmax(0, 1.05fr) minmax(390px, .95fr);
+    align-items: center;
+    gap: clamp(48px, 7vw, 100px);
+    padding-block: 88px;
+  }
+  .hero-main { max-width: 620px; }
+  .hero-art { width: 100%; min-height: 410px; }
+  .section {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: clamp(48px, 6vw, 84px);
+    padding-block: 112px;
+  }
+  .section-body { min-width: 0; max-width: 940px; }
+  .two-col { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+  .skill-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .project-main { grid-column: 1 / -1; }
+  .learning {
+    width: 100%;
+    padding-block: 100px;
+  }
+  .learning-inner {
+    width: min(1180px, 88%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
+    align-items: center;
+    gap: clamp(56px, 8vw, 120px);
+  }
+  .learning-inner > div,
+  .learning-inner > ol { min-width: 0; width: 100%; }
+  .learning-inner h2 {
+    max-width: 650px;
+    font-size: clamp(3.2rem, 5vw, 4.5rem);
+    line-height: 1.08;
+  }
+  .learning-inner .muted { max-width: 570px; }
+  .learning-inner ol { margin: 0; padding: 0; }
+  .learning-inner li {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    padding: 21px 0;
+    font-size: .95rem;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+  }
+  .learning-inner li span { margin: 2px 0 0; }
+  .contact { padding-block: 112px; }
+  .footer { min-height: 88px; }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  .header { padding-inline: 4%; gap: 20px; }
+  nav { gap: 22px; }
+  .wrap, .learning-inner { width: 92%; }
+  .section { grid-template-columns: 135px minmax(0,1fr); gap: 35px; }
+  .learning-inner { grid-template-columns: minmax(0,1fr) minmax(310px,.9fr); gap: 40px; }
+}
