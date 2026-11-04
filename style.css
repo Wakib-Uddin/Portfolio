@@ -101,3 +101,36 @@ body.dark .float-note{box-shadow:0 8px 25px #0005}
   h1{font-size:4rem}
   .section-body h2,.learning h2{font-size:2.35rem}
 }
+
+
+/* Fix the learning section grid collapsing on desktop and at browser zoom */
+.learning{width:100%;overflow:hidden}
+.learning-inner{
+  width:min(1120px,88%);
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);
+  align-items:center;
+  gap:clamp(32px,6vw,80px);
+}
+.learning-inner>div,.learning-inner>ol{min-width:0;width:100%}
+.learning-inner h2{max-width:620px;overflow-wrap:normal;word-break:normal}
+.learning-inner .muted{max-width:560px}
+.learning-inner ol{padding:0;margin:0;list-style:none}
+.learning-inner li{
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr);
+  align-items:start;
+  gap:10px;
+  overflow-wrap:anywhere;
+  padding:17px 0;
+}
+.learning-inner li span{margin:2px 0 0}
+@media(max-width:850px){
+  .learning-inner{grid-template-columns:minmax(0,1fr);gap:28px}
+}
+@media(max-width:620px){
+  .learning-inner{width:90%;gap:22px}
+  .learning-inner h2{font-size:clamp(2.4rem,11vw,3rem)}
+  .learning-inner li{grid-template-columns:30px minmax(0,1fr);font-size:.82rem}
+}
